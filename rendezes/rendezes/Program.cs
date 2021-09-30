@@ -15,13 +15,13 @@ namespace rendezes
         }
     }
 
-    class Sorter
+    public class Sorter
     {
         public void Sort<T>(Span<T> elements) where T : IComparable
         {
             for (int index = 0; index < elements.Length; index++)
             {
-                for (int current = 0; current < elements.Length - 2; current++)
+                for (int current = 0; current < elements.Length - 1; current++)
                 {
                     if (elements[current].CompareTo(elements[current + 1]) > 0)
                     {
